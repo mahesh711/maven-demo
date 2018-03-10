@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- document encoding -->
+        <theme>dark</theme>
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>COD Oracle Cloud ERP</documentTitle>
+
+        <!-- report name - displayed at top-nav -->
+        
+<!--         <reportName> -->
+<!--             <image id="image-zoom"> -->
+<!--                 <![CDATA[ -->
+<!--   				<img src='C:\EclipseWorkSpace\maven-demo\logo.jpg'/> -->
+  				
+<!--   				]]> -->
+<!--             </image> -->
+<!--         </reportName> -->
+
+        <!-- report headline - displayed at top-nav, after reportHeadline -->
+        <reportHeadline> : COD R12 Oracle Cloud ERP - P2P Process</reportHeadline>
+
+        <!-- global date format override -->
+        <!-- defaults to yyyy-MM-dd -->
+        <dateFormat>yyyy-MM-dd</dateFormat>
+
+        <!-- global time format override -->
+        <!-- defaults to HH:mm:ss -->
+        <timeFormat>HH:mm:ss</timeFormat>
+
+        <!-- custom javascript -->
+<!--         <scripts> -->
+<!--             <![CDATA[ -->
+<!--                 $(document).ready(function() { -->
+<!--                   $("#image-zoom").src("src",src); -->
+<!--                   $("#image-zoom").append("src",src); -->
+<!--                 }); -->
+<!--             ]]> -->
+<!--         </scripts> -->
+
+        <scripts>
+            <![CDATA[
+                 $(document).ready(function() {
+                 $(".logo-content").hide(); 
+                 $("#dashboard-view > div.time-totals > div:nth-child(3) > div").hide(); 
+                 $(".logo-container").html("Automation Log");
+                 $("#dashboard-view > div.time-totals > div:nth-child(1) > div > span.panel-name").html("Total Tests Count");
+                 $("#dashboard-view > div.time-totals > div:nth-child(2) > div > span.panel-name").html("Total Steps Count");
+                 $("#dashboard-view > div.time-totals > div.col.l2.m4.s6.suite-start-time > div > span.panel-name").html("Test Execution Start Time");
+                 $("#dashboard-view > div.time-totals > div.col.l2.m4.s6.suite-end-time > div > span.panel-name").html("Test Execution End Time");
+                 
+                 $("#dashboard-view > div.time-totals > div:nth-child(4) > div > span.panel-name").html("Total Test Cycle Runtime");
+                 $("#dashboard-view > div.system-view > div > div > span").html("Environment Details");
+                   
+                 });
+             ]]>
+        </scripts>
+        
+        
+     
+        
+   
+         
+        
+        
+        
+
+
+        <!-- custom styles -->
+<!--         <styles> -->
+<!--             <![CDATA[ -->
+<!--             .report-name { padding-left: 10px; } .report-name > img { float: left;height: 30px;margin-left: 60px;margin-top: 10px;width: 220px; } -->
+<!--         ]]> -->
+<!--         </styles> -->
+    </configuration>
+</extentreports>
